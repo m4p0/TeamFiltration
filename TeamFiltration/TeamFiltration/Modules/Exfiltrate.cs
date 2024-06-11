@@ -369,9 +369,6 @@ namespace TeamFiltration.Modules
 
             var exfilOptions = new ExifilOptions(args);
 
-            if (!Helpers.Generic.AreYouAnAdult())
-                return;
-
             if (args.Contains("--username") && args.Contains("--password"))
             {
 

@@ -17,9 +17,9 @@ namespace TeamFiltration
         static void PrintUsage()
         {
             Console.WriteLine("Usage:\n");
-            Console.WriteLine("   --outpath     Output path to store database and exfiltrated information (Needed for all modules)\n");
-            Console.WriteLine("   --config      Local path to your TeamFiltration.json configuration file, if not provided will load from the current path\n");
-            Console.WriteLine("   --exfil       Load the exfiltration module\n");
+            Console.WriteLine("         --outpath     Output path to store database and exfiltrated information (Needed for all modules)\n");
+            Console.WriteLine("         --config      Local path to your TeamFiltration.json configuration file, if not provided will load from the current path\n");
+            Console.WriteLine("         --exfil       Load the exfiltration module\n");
             Console.WriteLine("         --username            Override to target a given username that does not exist in the database");
             Console.WriteLine("         --password            Override to target a given password that does not exist in the database");
             Console.WriteLine("         --tokens              Override to target a (file with newline seperated JWT tokens|single JWT| , seperated JWT tokens) and perfom exfiltration");
@@ -34,7 +34,7 @@ namespace TeamFiltration
             Console.WriteLine("               --owa-limit          Set the max amount of emails to exfiltrate, default is 2k.");
             Console.WriteLine("         --jwt-tokens          Dump all gathered JSON formated JTW-tokens for SSO resources (MsGraph,AdGraph, Outlook, SharePoint, OneDrive, Teams)\n");
 
-            Console.WriteLine("   --spray       Load the spraying module\n");
+            Console.WriteLine("         --spray       Load the spraying module\n");
             Console.WriteLine("         --aad-sso             Use SecureWorks's Azure Active Directory password brute-forcing technique when spraying");
             Console.WriteLine("         --us-cloud            When spraying companies attached to US Tenants (https://login.microsoftonline.us/)\n");
 
@@ -57,7 +57,7 @@ namespace TeamFiltration
             Console.WriteLine("         --push-locked         Get Pushover notifications when an sprayed account gets locked (requires pushover keys in config)");
             Console.WriteLine("         --force               Force the spraying to proceed even if there is less the <sleep> time since the last attempt\n");
 
-            Console.WriteLine("   --enum        Load the enumeration module\n");
+            Console.WriteLine("         --enum        Load the enumeration module\n");
             Console.WriteLine("         --domain              Domain to perfom enumeration against, names pulled from statistically-likely-usernames if not provided with --usernames");
             Console.WriteLine("         --usernames           Path to a list of usernames to enumerate (emails)");
             Console.WriteLine("         --tenant-info         Enumerates tenant and domain information (Based on Invoke-AADIntReconAsOutsider from AADInternal)");
@@ -66,9 +66,9 @@ namespace TeamFiltration
             Console.WriteLine("         --validate-teams      Validate that the given o365 accounts exists using the Teams API method (Recommended - Super Fast 300 e/s)");
             Console.WriteLine("         --validate-login      Validate that the given o365 accounts by attemping to login (Noisy - triggers logins - Fast 100 e/s)\n");
 
-            Console.WriteLine("   --backdoor        Loads the interactive backdoor module\n");
-            Console.WriteLine("   --database        Loads the interactive database browser module\n");
-            Console.WriteLine("   --debug           Proxy all outgoing HTTP requests through the proxy specified in the config\n");
+            Console.WriteLine("         --backdoor        Loads the interactive backdoor module\n");
+            Console.WriteLine("         --database        Loads the interactive database browser module\n");
+            Console.WriteLine("         --debug           Proxy all outgoing HTTP requests through the proxy specified in the config\n");
 
             Console.WriteLine("   Examples:\n");
             Console.WriteLine(@"        --outpath C:\Clients\2023\FooBar\TFOutput --config myCustomConfig.json --spray --sleep-min 120 --sleep-max 200 --push --shuffle-users --shuffle-regions");
